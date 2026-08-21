@@ -1,282 +1,302 @@
-<!DOCTYPEhtml>
-<htmllang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<metacharset="UTF-8">
-<meta
-name="viewport"
-content="width=device-width,initial-scale=1.0"
->
-<meta
-name="description"
-content="WeatherFlowisamodernweatherapplicationpoweredbyarealweatherAPI."
->
-<meta
-name="theme-color"
-content="#2563eb"
->
-<title>WeatherFlow—WeatherApp</title>
-<link
-rel="preconnect"
-href="https://fonts.googleapis.com"
->
-<link
-rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin
->
-<link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-rel="stylesheet"
->
-<link
-rel="stylesheet"
-href="style.css"
->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinkVault</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<divclass="app">
-<!--Header-->
-<headerclass="topbar">
-<divclass="brand">
-<divclass="brand-icon">
-☁
-</div>
-<div>
-<h1>WeatherFlow</h1>
-<span>
-WeatherDashboard
-</span>
-</div>
-</div>
-<button
-id="themeButton"
-class="icon-button"
-type="button"
-aria-label="Toggletheme"
->
-◐
-</button>
-</header>
-<!--Main-->
-<mainclass="main-content">
-<!--Search-->
-<sectionclass="search-section">
-<divclass="section-heading">
-<spanclass="eyebrow">
-WEATHER
-</span>
-<h2>
-Checktheweather
-</h2>
-<p>
-Searchforacitytoseeitscurrentweatherconditions.
-</p>
-</div>
-<form
-id="searchForm"
-class="search-form"
->
-<label
-for="cityInput"
-class="visually-hidden"
->
-Cityname
-</label>
-<input
-id="cityInput"
-type="search"
-placeholder="Enteracity..."
-autocomplete="off"
-required
->
-<button
-id="searchButton"
-class="primary-button"
-type="submit"
->
-Search
-</button>
-</form>
-</section>
-<!--Status-->
-<div
-id="loadingState"
-class="status-message"
-hidden
->
-<divclass="loading-spinner"></div>
-<p>
-Loadingweather...
-</p>
-</div>
-<div
-id="errorState"
-class="status-messageerror"
-hidden
->
-<divclass="status-icon">
-!
-</div>
-<div>
-<h3>
-Somethingwentwrong
-</h3>
-<pid="errorMessage">
-Unabletoloadweatherdata.
-</p>
-</div>
-</div>
-<!--Weather-->
-<section
-id="weatherSection"
-class="weather-section"
-hidden
->
-<!--Location-->
-<divclass="location-header">
-<div>
-<spanclass="section-label">
-CURRENTWEATHER
-</span>
-<h2id="locationName">
-—
-</h2>
-<pid="locationDetails">
-—
-</p>
-</div>
-<div
-id="weatherIcon"
-class="weather-icon"
->
-☀
-</div>
-</div>
-<!--MainWeatherCard-->
-<articleclass="weather-card">
-<divclass="temperature">
-<strongid="temperature">
-—
-</strong>
-<span>
-°C
-</span>
-</div>
-<p
-id="weatherDescription"
-class="weather-description"
->
-—
-</p>
-</article>
-<!--WeatherDetails-->
-<section
-class="details-grid"
-aria-label="Weatherdetails"
->
-<articleclass="detail-card">
-<spanclass="detail-icon">
-💧
-</span>
-<div>
-<span>
-Humidity
-</span>
-<strongid="humidity">
-—
-</strong>
-</div>
-</article>
-<articleclass="detail-card">
-<spanclass="detail-icon">
-💨
-</span>
-<div>
-<span>
-Wind
-</span>
-<strongid="windSpeed">
-—
-</strong>
-</div>
-</article>
-<articleclass="detail-card">
-<spanclass="detail-icon">
-🌡️
-</span>
-<div>
-<span>
-FeelsLike
-</span>
-<strongid="feelsLike">
-—
-</strong>
-</div>
-</article>
-<articleclass="detail-card">
-<spanclass="detail-icon">
-☔
-</span>
-<div>
-<span>
-Rain
-</span>
-<strongid="precipitation">
-—
-</strong>
-</div>
-</article>
-</section>
-<!--Forecast-->
-<sectionclass="forecast-section">
-<divclass="section-header">
-<div>
-<spanclass="section-label">
-FORECAST
-</span>
-<h2>
-UpcomingDays
-</h2>
-</div>
-</div>
-<div
-id="forecastGrid"
-class="forecast-grid"
->
-<!--ForecastcardsgeneratedbyJavaScript-->
-</div>
-</section>
-</section>
-<!--InitialEmptyState-->
-<section
-id="emptyState"
-class="empty-state"
->
-<divclass="empty-icon">
-🌤️
-</div>
-<h2>
-Searchforacity
-</h2>
-<p>
-Enteracitynameabovetoseeitscurrentweatherandforecast.
-</p>
-</section>
-</main>
-<!--Footer-->
-<footerclass="footer">
-<span>
-WeatherFlow
-</span>
-<span>
-•
-</span>
-<span>
-BuiltwithHTML,CSS&JavaScript
-</span>
-</footer>
-</div>
-<scriptsrc="script.js"></script>
+
+    <div class="app">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">🔗</div>
+
+                <div>
+                    <h1>LinkVault</h1>
+                    <p>Save. Organize. Access.</p>
+                </div>
+            </div>
+
+            <button
+                class="theme-button"
+                id="themeButton"
+                type="button"
+                aria-label="Toggle theme"
+            >
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <div class="stat-card">
+                <span class="stat-icon">🔗</span>
+
+                <div>
+                    <span class="stat-label">Total Links</span>
+                    <strong id="totalLinks">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+
+                <div>
+                    <span class="stat-label">Favorites</span>
+                    <strong id="favoriteLinks">0</strong>
+                </div>
+            </div>
+
+
+            <div class="stat-card">
+                <span class="stat-icon">📁</span>
+
+                <div>
+                    <span class="stat-label">Categories</span>
+                    <strong id="totalCategories">0</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- ADD LINK -->
+        <section class="add-section">
+
+            <button
+                class="add-button"
+                id="openModalButton"
+                type="button"
+            >
+                <span>＋</span>
+                Add Link
+            </button>
+
+        </section>
+
+
+        <!-- SEARCH -->
+        <section class="controls">
+
+            <div class="search-box">
+
+                <span>🔎</span>
+
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search your links..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="filter-row">
+
+                <button
+                    class="filter-button active"
+                    data-category="all"
+                    type="button"
+                >
+                    All
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="GitHub"
+                    type="button"
+                >
+                    GitHub
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Learning"
+                    type="button"
+                >
+                    Learning
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Tools"
+                    type="button"
+                >
+                    Tools
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-category="Resources"
+                    type="button"
+                >
+                    Resources
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- LINKS -->
+        <main>
+
+            <div
+                class="links-grid"
+                id="linksGrid"
+            ></div>
+
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+                <div class="empty-icon">🔗</div>
+
+                <h2>No links found</h2>
+
+                <p>
+                    Add your first useful link to start building your vault.
+                </p>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- MODAL -->
+    <div
+        class="modal hidden"
+        id="linkModal"
+    >
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <div>
+                    <h2 id="modalTitle">Add Link</h2>
+                    <p>Save a useful resource.</p>
+                </div>
+
+                <button
+                    class="close-button"
+                    id="closeModalButton"
+                    type="button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="linkForm">
+
+                <input
+                    type="hidden"
+                    id="linkId"
+                >
+
+
+                <label for="linkTitle">
+                    Title
+                </label>
+
+                <input
+                    id="linkTitle"
+                    type="text"
+                    placeholder="GitHub"
+                    required
+                    maxlength="80"
+                >
+
+
+                <label for="linkUrl">
+                    URL
+                </label>
+
+                <input
+                    id="linkUrl"
+                    type="url"
+                    placeholder="https://github.com"
+                    required
+                >
+
+
+                <label for="linkCategory">
+                    Category
+                </label>
+
+                <select
+                    id="linkCategory"
+                    required
+                >
+                    <option value="GitHub">GitHub</option>
+                    <option value="Learning">Learning</option>
+                    <option value="Tools">Tools</option>
+                    <option value="Resources">Resources</option>
+                </select>
+
+
+                <label for="linkDescription">
+                    Description
+                </label>
+
+                <textarea
+                    id="linkDescription"
+                    placeholder="What is this link useful for?"
+                    maxlength="200"
+                ></textarea>
+
+
+                <label class="favorite-input">
+
+                    <input
+                        id="linkFavorite"
+                        type="checkbox"
+                    >
+
+                    <span>⭐ Add to favorites</span>
+
+                </label>
+
+
+                <button
+                    class="save-button"
+                    type="submit"
+                >
+                    Save Link
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        class="toast"
+        id="toast"
+    ></div>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
-  
